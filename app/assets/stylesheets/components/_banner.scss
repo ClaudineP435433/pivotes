@@ -1,6 +1,8 @@
-
+.wrapper {
+   position: relative;
+}
 .banner {
-  position: relative;
+
   color: white;
   text-align: center;
   height: 100vh;
@@ -19,7 +21,7 @@
   font-size: 25px;
   font-weight: lighter;
   color: rgb(255, 255, 255);
-  opacity: 0.6;
+  opacity: 0.7;
   margin-bottom: 30px;
 }
 .parallax {
@@ -27,15 +29,20 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.banner-content {
+  z-index: 10;
 }
 .banner-menu {
   position: absolute;
+  position: fixed;
   top: 0px;
   right: 20px;
   border-bottom: 2px solid transparent;
   padding: 20px 0;
   color: white;
+  z-index: 10;
 }
 
 .banner-menu a {
@@ -53,3 +60,18 @@
 
     }
   }
+
+.opacity-light {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.45;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+}
+
+.bg-dark-gray {
+  background: #252525 !important;
+}
