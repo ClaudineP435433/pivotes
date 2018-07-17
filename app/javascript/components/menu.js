@@ -12,5 +12,4 @@ function menu_active() {
   });
 };
 
-
 export { menu_active };
