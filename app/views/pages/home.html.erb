@@ -1,44 +1,60 @@
-<div id="index" class="banner parallax" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "fond_pivotes.jpg" %>');">
-  <div class="banner-content">
-    <h1><%= image_tag "logo.png", height: 200 %></h1>
-    <p>Notre Aventure Numérique</p>
-  </div>
+<div class="wrapper">
   <div class="banner-menu">
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <a href="#index" class="menu-button active">Accueil</a>
+    <a href="#portfolio" class="menu-button">Portfolio</a>
+    <a href="#contact" class="menu-button">Contact</a>
   </div>
-</div>
 
-<div id="portfolio" class="banner parallax" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "fond2.jpg" %>');">
-  <div class="banner-content">
-    <h1><%= image_tag "projets.png", height: 200 %></h1>
-    <p>Site et Application web</p>
-    <div class="projets">
-      <%= link_to "http://www.riadzouhra.com/" do %>
-        <div class="card">
-          <%= image_tag "riad.png", height: 200 %>
-        </div>
-      <% end %>
-      <%= link_to "http://www.happyseat.fr/" do %>
-        <div class="card">
-          <%= image_tag "happy.png", height: 200 %>
-        </div>
-      <% end %>
+
+<!--
+  <div id="index" class="banner parallax" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%#= image_path "fond_pivotes.jpg" %>');">
+    <div class="banner-content">
+      <h1><%#= image_tag "logo.png", height: 200 %></h1>
+      <p>Notre Aventure Numérique</p>
     </div>
   </div>
-  <div class="banner-menu">
-    <a href="#index">Accueil</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
+-->
 
-<div id="contact" class="banner parallax" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "agree.jpg" %>');">
-  <div class="banner-content">
-    <h1><%= image_tag "clo.png", height: 200 %></h1>
-    <p>Une Aventure Humaine</p>
+  <div id="index" class="banner parallax" style="background: url('<%= image_path "fond_pivotes.jpg" %>');">
+    <div class="opacity-light bg-dark-gray"></div>
+    <div class="banner-content">
+      <h1><%= image_tag "logo.png", height: 200 %></h1>
+      <p>Notre Aventure Numérique</p>
+    </div>
   </div>
-  <div class="banner-menu">
-    <a href="#index">Accueil</a>
-    <a href="#portfolio">Portfolio</a>
+
+  <div id="portfolio" class="banner parallax" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "fond2.jpg" %>');">
+    <div class="banner-content">
+      <h1><%= image_tag "projets.png", height: 200 %></h1>
+      <p>Site et Application web</p>
+      <div class="row">
+        <div class="projects">
+          <div class="col-xs-12 col-sm-3">
+          <%= link_to "http://www.riadzouhra.com/" do %>
+            <div class="card">
+              <%= image_tag "riad.png"%>
+            </div>
+          <% end %>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+          <%= link_to "http://www.happyseat.fr/" do %>
+            <div class="card">
+              <%= image_tag "happy.png"%>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="contact" class="banner parallax" style="background: url('<%= image_path "agree.jpg" %>');">
+    <div class="opacity-light bg-dark-gray"></div>
+    <div class="banner-content">
+      <h1><%= image_tag "clo.png", height: 200 %></h1>
+      <p>Une Aventure Humaine</p>
+    </div>
+
   </div>
 </div>
