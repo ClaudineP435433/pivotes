@@ -24,10 +24,13 @@ function onScroll() {
 
   window.addEventListener("scroll", function(event) {
     var top = this.scrollY;
-    if (top > (portfolioPos[0]-10) && top < contactPos[0]) {
+    console.log("top " +top);
+    console.log(contactPos[0]-30);
+    if (top > (portfolioPos[0]-10) && top < (contactPos[0]-30)) {
       buttons.forEach((button) => button.classList.remove('active'));
       portfolio.classList.add('active');
-    } else if (top >= (contactPos[0])-20){
+    } else if (top >= (contactPos[0])-30){
+
       buttons.forEach((button) => button.classList.remove('active'));
       contact.classList.add('active');
     } else {
