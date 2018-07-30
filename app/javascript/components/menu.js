@@ -5,8 +5,6 @@ function menu_active() {
       buttons.forEach((button) => button.classList.remove('active'));
       button.classList.add('active');
     });
-
-
   });
 };
 
@@ -15,10 +13,12 @@ function onScroll() {
   const banners = document.querySelectorAll(".banner");
   const buttons = document.querySelectorAll(".menu-button");
   const index = document.getElementById('index-button');
+  const services = document.getElementById('services-button');
   const portfolio = document.getElementById('portfolio-button');
   const contact = document.getElementById('contact-button');
 
   const indexPos = findPos(document.getElementById('index'));
+  const servicesPos = findPos(document.getElementById('services'));
   const portfolioPos = findPos(document.getElementById('portfolio'));
   const contactPos = findPos(document.getElementById('contact'));
 
@@ -26,11 +26,13 @@ function onScroll() {
     var top = this.scrollY;
     console.log("top " +top);
     console.log(contactPos[0]-30);
-    if (top > (portfolioPos[0]-10) && top < (contactPos[0]-30)) {
+    if (top > (servicesPos[0]-10) && top < (portfolioPos[0]-30)) {
+      buttons.forEach((button) => button.classList.remove('active'));
+      services.classList.add('active');
+    } else if (top > (portfolioPos[0]-10) && top < (contactPos[0]-30)) {
       buttons.forEach((button) => button.classList.remove('active'));
       portfolio.classList.add('active');
     } else if (top >= (contactPos[0])-30){
-
       buttons.forEach((button) => button.classList.remove('active'));
       contact.classList.add('active');
     } else {
