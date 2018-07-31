@@ -23,6 +23,8 @@
   font-weight: lighter;
   color: rgb(255, 255, 255);
   opacity: 0.5;
+  margin-left: 5px;
+  margin-right: 5px;
   a {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -34,7 +36,7 @@
 
 }
 .banner {
-
+  position: relative;
   color: white;
   text-align: center;
   height: 100vh;
@@ -57,6 +59,11 @@
   color: rgb(255, 255, 255);
   opacity: 0.7;
   margin-bottom: 30px;
+
+}
+
+#subtitle {
+  margin-top: 5px;
 }
 .parallax {
   background-attachment: fixed;
@@ -65,7 +72,20 @@
 }
 
 .banner-content {
+  position: relative;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-content-around {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .banner-menu {
   position: absolute;
@@ -124,11 +144,20 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  opacity: 0.45;
+  opacity: 0.75;
   z-index: 1;
   top: 0;
   left: 0;
+}
 
+.opacity-extra-light {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 .bg-dark-gray {

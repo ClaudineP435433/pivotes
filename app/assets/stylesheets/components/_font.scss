@@ -1,3 +1,23 @@
 .font-legal {
   font-family: "Open Sans", "Helvetica", "sans-serif";
 }
+
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.flex-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
