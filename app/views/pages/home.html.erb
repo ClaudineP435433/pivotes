@@ -17,23 +17,28 @@
 
   <div id="services" class="banner parallax" style="background-image: url('<%= image_path "celebrate.jpg" %>');">
     <div class="opacity-extra-light bg-dark-gray"></div>
-    <div class="banner-content">
+
+    <!-- Vue Normal -->
+    <div class="banner-content-around hidden-xs hidden-sm ">
       <!-- <h1><%#= image_tag "service.png", height: 200 %></h1>
       <h1 class="hidden">pivO'tes, Developpement Web</h1> -->
       <div class="logo-card">
         <%= image_tag "logoxxs.svg"%>
         <div>
           <p id="p-title">Services proposés</p>
-          <p>Expertise, Technologie, Prestations,...</p>
+          <p>Expertise, Technologie, Prestations</p>
         </div>
       </div>
 
-        <div class="service-card presta-card hidden-xs">
+      <div class="flex-column card-space card-position">
+        <div class="service-card presta-card">
           <p id="p-title">Prestations</p>
-          <p>Développement de Site ou d'Application Web</p>
-          <p>Parcours d'appropriation avec fourniture de Notice</p>
+          <p><i class="fas fa-chevron-circle-right"></i> Développement de <strong>Site et d'Application Web</strong></p>
+          <p><i class="fas fa-chevron-circle-right"></i> Création et <strong>Gestion de Projets</strong> Web</p>
+          <p><i class="fas fa-chevron-circle-right"></i> Parcours d'appropriation du Site avec Fourniture de Notices</p>
+          <p><i class="fas fa-chevron-circle-right"></i> <strong>Accompagnement</strong> et Transfert de Connaissance</p>
         </div>
-        <div class="service-card techno-card hidden-xs">
+        <div class="service-card techno-card">
           <p id="p-title">Technologies</p>
           <div class="flex-item">
             <div class="flex-column">
@@ -76,25 +81,94 @@
             </div>
           </div>
         </div>
+        <div class="service-card expertise-card">
+          <p id="p-title">Expertise</p>
+          <p>Gestion de projets</p>
+          <p>Compétences métiers : Logistique, Achats, Finance,...</p>
+          <p></p>
+        </div>
+      </div>
 
     </div>
+
+    <!-- Vue Xs & SM -->
+    <div class="banner-content hidden-md hidden-lg">
+      <div class="logo-card">
+        <%= image_tag "logoxxs.svg"%>
+        <div>
+          <p id="p-title">Services proposés</p>
+          <p>Expertise, Technologie, Prestations</p>
+        </div>
+      </div>
+      <div class="flex-column card-space card-position">
+        <div class="service-card">
+          <p id="p-title">Prestations</p>
+          <p><i class="fas fa-chevron-circle-right"></i> Développement de <strong>Site et d'Application Web</strong></p>
+          <p><i class="fas fa-chevron-circle-right"></i> Création et <strong>Gestion de Projets</strong> Web</p>
+          <p><i class="fas fa-chevron-circle-right"></i> Parcours d'appropriation du Site avec Fourniture de Notices</p>
+          <p><i class="fas fa-chevron-circle-right"></i> <strong>Accompagnement</strong> et Transfert de Connaissance</p>
+        </div>
+        <div class="service-card">
+          <p id="p-title">Technologies</p>
+          <div class="flex-item">
+            <div class="flex-column">
+              <p><%= image_tag "logo-ruby.png"%></p>
+              <p>Ruby</p>
+            </div>
+            <div class="flex-column">
+              <p><%= image_tag "logo-rails.png"%></p>
+              <p>Rails</p>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="flex-column">
+              <p><%= image_tag "logo-html.png"%></p>
+              <p>HTML</p>
+            </div>
+            <div class="flex-column">
+              <p><%= image_tag "logo-css3.png"%></p>
+              <p>CSS</p>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="flex-column">
+              <p><%= image_tag "logo-js.png"%></p>
+              <p>Java Script</p>
+            </div>
+            <div class="flex-column">
+              <p><%= image_tag "logo-pg.png"%></p>
+              <p>Postgresql</p>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="flex-column">
+              <p><%= image_tag "logo-github.png"%></p>
+              <p>Github</p>
+            </div>
+            <div class="flex-column">
+              <p><%= image_tag "logo-heroku.jpg"%></p>
+              <p>Heroku</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <p id="p-title">Expertise</p>
+          <p>Gestion de projets</p>
+          <p>Compétences métiers : Logistique, Achats, Finance,...</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div id="portfolio" class="banner parallax" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "fond2.jpg" %>');">
     <div class="opacity-extra-light bg-dark-gray"></div>
-    <div class="banner-content">
+    <div class="banner-content-around hidden-xs hidden-sm">
     <!-- <h1><%#= image_tag "clo2.png", height: 200 %></h1> -->
-      <div class="logo-card">
-        <%= image_tag "logoxxs.svg"%>
-        <div>
-          <p id="p-title">Projets</p>
-          <p>Innover, Collaborer, Accompagner</p>
-        </div>
-      </div>
 
-      <p id="subtitle">Site et Application web</p>
-      <div class="row">
-        <div class="flex-center">
+      <div class="row card-space">
+        <div class="flex-column">
           <div class="col-xs-12 col-sm-3">
           <%= link_to "http://www.riadzouhra.com/", target: "_blank" do %>
             <div class="card">
@@ -103,6 +177,47 @@
           <% end %>
           </div>
           <div class="col-xs-12 col-sm-3">
+          <%= link_to "http://www.happyseat.fr/", target: "_blank" do %>
+            <div class="card">
+              <%= image_tag "happy.png"%>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-column">
+        <div class="logo-card">
+          <%= image_tag "logoxxs.svg"%>
+          <div>
+            <p id="p-title">Projets</p>
+            <p>Innover, Collaborer, Accompagner</p>
+          </div>
+        </div>
+        <p id="subtitle">Site et Application web</p>
+      </div>
+    </div>
+
+   <!--  Vue Xs & SM -->
+    <div class="banner-content hidden-md hidden-lg">
+      <div class="logo-card">
+        <%= image_tag "logoxxs.svg"%>
+        <div>
+          <p id="p-title">Projets</p>
+          <p>Innover, Collaborer, Accompagner</p>
+        </div>
+      </div>
+      <p id="subtitle">Site et Application web</p>
+      <div class="row">
+        <div class="flex-center">
+          <div class="col-xs-5 col-sm-4">
+          <%= link_to "http://www.riadzouhra.com/", target: "_blank" do %>
+            <div class="card">
+              <%= image_tag "riad.png"%>
+            </div>
+          <% end %>
+          </div>
+          <div class="col-xs-5 col-sm-4">
           <%= link_to "http://www.happyseat.fr/", target: "_blank" do %>
             <div class="card">
               <%= image_tag "happy.png"%>

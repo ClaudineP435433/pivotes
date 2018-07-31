@@ -29,6 +29,7 @@
 
 #p-title{
   font-size: 25px;
+  text-align: center;
 }
 
 .logo-card a{
@@ -80,18 +81,37 @@
 
 .presta-card {
   position: absolute;
-  top: 150px;
-  right: 400px;
+  top: -170px;
+  left: 390px;
   width: 200px;
-  height: 200px;
+  height: 230px;
+  text-align: justify;
+  padding: 5px;
+  p {
+    padding-top: 1px;
+  }
 }
 
 .techno-card {
   position: absolute;
-  top: -165px;
-  left: 400px;
+  top: -315px;
+  left: 125px;
   width: 200px;
   height: 300px;
   margin: 10px;
 }
+.expertise-card {
+  position: absolute;
+  top: 75px;
+  left: 220px;
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}
 
+.card-space {
+  width: 50vw;
+}
+.card-position {
+  position: relative;
+}
